@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "[Abhilash Joshi] - Portfolio"
+title: "Abhilash Joshi - Portfolio"
 ---
 
-# [Abhilash]
+# Abhilash
 Engineer passionate about data engineering, ML, and AI. Currently exploring opportunities in these fields.
 
 ## Projects
@@ -23,5 +23,5 @@ Built a reinforcement learning agent using PyTorch and CUDA to stress test GPU c
 - Data Visualization: Dash, Grafana, QuickSight
 
 ## Contact
-- Email: [ajoshi22@buffalo.edu]
+- Email: ajoshi22@buffalo.edu
 - [https://www.linkedin.com/in/abhilashjoshi](#) | [https://www.github.com/abhilashjoshi25](#)
