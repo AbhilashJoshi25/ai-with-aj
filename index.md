@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Abhilash Joshi - Portfolio"
+title: "[Your Name] - Portfolio"
 ---
 
 <div class="sidebar">
