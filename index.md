@@ -1,8 +1,3 @@
----
-layout: default
-title: "Abhilash Joshi - Portfolio"
----
-
 # Abhilash
 Engineer passionate about data engineering, ML, and AI. Currently exploring opportunities in these fields.
 
