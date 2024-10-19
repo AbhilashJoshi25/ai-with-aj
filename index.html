@@ -6,55 +6,87 @@
     <title>Abhilash - Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        /* Custom styles for sidebar and content layout */
+        /* General styles for layout */
         body {
             display: flex;
             margin: 0;
             font-family: Arial, sans-serif;
             height: 100vh;
-            overflow: hidden; /* Prevents the full page from scrolling */
+            overflow: hidden;
         }
+
+        /* Styles for the sidebar */
         .sidebar {
-            width: 260px; /* Set width to balance between previous versions */
-            background-color: #f4f4f4;
+            width: 260px;
+            background-color: #f0f0f0; /* Light grey background */
             padding: 20px;
             height: 100vh;
-            overflow: auto;
-            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visual distinction */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers items horizontally */
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
         }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ccc; /* Placeholder color until image is added */
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Styles for the content area */
         .content {
             flex-grow: 1;
-            padding: 20px 40px; /* Added balanced padding */
+            padding: 40px;
+            background-color: #222222; /* Dark theme for main content */
+            color: #f0f0f0; /* Light grey text color for good contrast */
             height: 100vh;
-            overflow-y: auto; /* Allows the right content area to scroll */
+            overflow-y: auto;
             box-sizing: border-box;
         }
-        header {
-            font-weight: bold;
-            font-size: 24px;
-            margin-bottom: 20px;
+
+        /* Text and link styling for the dark theme */
+        h1, h2, h3 {
+            color: #ffffff;
         }
+
         a {
-            color: #0366d6;
+            color: #1e90ff; /* Light blue for contrast */
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .project-title {
             position: relative;
             display: inline-block;
         }
+
         .project-title a {
             text-decoration: none;
-            color: #0366d6;
+            color: #1e90ff; /* Light blue for better visibility on dark background */
             font-weight: bold;
         }
+
         .link-icon {
             visibility: hidden;
             font-size: 16px;
             margin-left: 5px;
         }
+
         .project-title:hover .link-icon {
             visibility: visible;
         }
@@ -62,17 +94,10 @@
 </head>
 <body>
     <div class="sidebar">
-        <header>Minimal Theme</header>
-        <p>Minimal is a theme for GitHub Pages.</p>
-        <p>
-            <a href="https://github.com/pages-themes/minimal">View the Project on GitHub</a>
-        </p>
-        <p><strong>Download</strong></p>
-        <ul>
-            <li><a href="#">ZIP File</a></li>
-            <li><a href="#">TAR Ball</a></li>
-            <li><a href="#">View On GitHub</a></li>
-        </ul>
+        <!-- Placeholder for profile photo -->
+        <div class="profile-photo">
+            <img src="https://via.placeholder.com/150" alt="Profile Photo">
+        </div>
     </div>
 
     <div class="content">
@@ -114,9 +139,10 @@
 
         <h2>Skills</h2>
         <ul>
-            <li>Programming: Python, C++, C#</li>
-            <li>ML/DL Tools: TensorFlow, PyTorch</li>
-            <li>Cloud: AWS (S3, Lambda, SageMaker), Azure</li>
+            <li>Programming Languages: Python, Pandas, C++</li>
+            <li>Libraries/ Frameworks: LangChain, cuDNN, TensorFlow, PyTorch, DirectML, Scikit-Learn, NumPy</li>
+            <li>Tools/ Platforms: AWS, Git, VSCode, Docker, Kubernetes, Apache Kafka</li>
+            <li>Databases: SQL, MongoDB, Athena</li>
             <li>Data Visualization: Dash, Grafana, QuickSight</li>
         </ul>
 
