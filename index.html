@@ -8,9 +8,8 @@
     <style>
         /* General styles for layout */
         body {
-            margin: 0 auto;
+            margin: 0;
             font-family: Arial, sans-serif;
-            max-width: 1200px;
             height: 100vh;
             overflow: hidden;
             background-color: #222222;
@@ -23,10 +22,15 @@
             width: 100%;
             padding: 40px;
             height: 100vh;
-            overflow-y: auto;
+            overflow-y: scroll;
+            scrollbar-width: none; /* Hide scrollbar in Firefox */
+            -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
             box-sizing: border-box;
-            margin: 0 auto;
             text-align: left;
+        }
+
+        .content::-webkit-scrollbar {
+            display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
         }
 
         /* Text and link styling for the dark theme */
