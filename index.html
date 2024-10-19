@@ -6,28 +6,28 @@
     <title>Abhilash - Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        /* Add your custom styles here for sidebar and content */
+        /* Add custom styles for sidebar layout */
         body {
             display: flex;
             margin: 0;
             font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden; /* Prevents the full page from scrolling */
         }
         .sidebar {
-            width: 25%;
-            min-width: 200px;
-            max-width: 300px;
+            width: 300px;
             background-color: #f4f4f4;
             padding: 20px;
-            position: fixed;
             height: 100vh;
             overflow: auto;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visual distinction */
         }
         .content {
-            margin-left: 25%;
-            padding: 20px;
             flex-grow: 1;
+            padding: 20px;
             height: 100vh;
-            overflow: auto;
+            overflow-y: auto; /* Allows the right content area to scroll */
+            box-sizing: border-box;
         }
         header {
             font-weight: bold;
@@ -82,7 +82,7 @@
 
         <h2>Contact</h2>
         <p>Email: ajoshi22@buffalo.edu</p>
-        <p><a href="https://www.linkedin.com/in/abhilashjoshi">LinkedIn</a> | <a href="https://www.github.com/abhilashjoshi25">GitHub</a>  | <a href="https://x.com/abhilashjoshi55">X</a></p>
+        <p><a href="https://www.linkedin.com/in/abhilashjoshi">LinkedIn</a> | <a href="https://www.github.com/abhilashjoshi25">GitHub</a> | <a href="https://www.x.com/abhilashjoshi55">GitHub</a></p>
     </div>
 </body>
 </html>
