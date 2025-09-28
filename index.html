@@ -22,7 +22,7 @@
         </div>
 
         <div class="container">
-            <img src="assets/images/profile_photo_1.png" alt="Profile Photo of Abhilash Joshi" class="profile-photo">
+            <img src="assets/images/profile_photo_2.png" alt="Profile Photo of Abhilash Joshi" class="profile-photo">
             
             <h1>Abhilash Joshi</h1>
             
@@ -43,39 +43,9 @@
             <div class="container">
                 <h2>My Projects</h2>
                 <div class="project-grid">
-                    <div class="project-card">
-                        <img src="assets/images/project1-placeholder.jpg" alt="Project 1 Screenshot">
-                        <div class="project-card-content">
-                            <h3>Project Name 1</h3>
-                            <p>A brief, compelling description of what this project is, the problem it solves, and the technologies used.</p>
-                            <div class="project-links">
-                                <a href="#" target="_blank">View Live</a>
-                                <a href="#" target="_blank">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="assets/images/project2-placeholder.jpg" alt="Project 2 Screenshot">
-                        <div class="project-card-content">
-                            <h3>Project Name 2</h3>
-                            <p>A brief, compelling description of what this project is, the problem it solves, and the technologies used.</p>
-                            <div class="project-links">
-                                <a href="#" target="_blank">View Live</a>
-                                <a href="#" target="_blank">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="assets/images/project3-placeholder.jpg" alt="Project 3 Screenshot">
-                        <div class="project-card-content">
-                            <h3>Project Name 3</h3>
-                            <p>A brief, compelling description of what this project is, the problem it solves, and the technologies used.</p>
-                            <div class="project-links">
-                                <a href="#" target="_blank">View Live</a>
-                                <a href="#" target="_blank">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="project-card"><img src="assets/images/project1-placeholder.jpg" alt="Project 1 Screenshot"><div class="project-card-content"><h3>Project Name 1</h3><p>A brief, compelling description of your project.</p><div class="project-links"><a href="#">View Live</a><a href="#">Source Code</a></div></div></div>
+                    <div class="project-card"><img src="assets/images/project2-placeholder.jpg" alt="Project 2 Screenshot"><div class="project-card-content"><h3>Project Name 2</h3><p>A brief, compelling description of your project.</p><div class="project-links"><a href="#">View Live</a><a href="#">Source Code</a></div></div></div>
+                    <div class="project-card"><img src="assets/images/project3-placeholder.jpg" alt="Project 3 Screenshot"><div class="project-card-content"><h3>Project Name 3</h3><p>A brief, compelling description of your project.</p><div class="project-links"><a href="#">View Live</a><a href="#">Source Code</a></div></div></div>
                 </div>
             </div>
         </section>
@@ -109,23 +79,8 @@
     <script>
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
-
-        const applySavedTheme = () => {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                body.classList.add('dark-mode');
-            }
-        };
-
-        const toggleTheme = () => {
-            body.classList.toggle('dark-mode');
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.removeItem('theme');
-            }
-        };
-
+        const applySavedTheme = () => { const savedTheme = localStorage.getItem('theme'); if (savedTheme === 'dark') { body.classList.add('dark-mode'); } };
+        const toggleTheme = () => { body.classList.toggle('dark-mode'); if (body.classList.contains('dark-mode')) { localStorage.setItem('theme', 'dark'); } else { localStorage.removeItem('theme'); } };
         themeToggle.addEventListener('click', toggleTheme);
         document.addEventListener('DOMContentLoaded', applySavedTheme);
     </script>
