@@ -4,99 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhilash Joshi</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="portfolio-wrapper">
 
-    <header class="hero">
-      <div id="theme-toggle" class="theme-toggle">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-      </div>
-
-      <div class="container">
-        <img src="images/profile_photo_2.png" alt="Profile Photo of Abhilash Joshi" class="profile-photo">
-    
-        <h1>Abhilash Joshi</h1>
-    
-        <p class="headline">Creating Intelligent Solutions with AI and Code</p>
-    
-        <a href="#projects" class="cta-button">View My Work</a>
-    
-        <div class="social-links" style="margin-top: 2rem;">
-          <a href="https://github.com/AbhilashJoshi25" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/abhilashjoshi" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://x.com/abhilashjoshi55" target="_blank" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <div class="left-panel">
+            <div id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </div>
+            <img src="images/profile_photo_2.png" alt="Profile Photo of Abhilash Joshi" class="profile-photo">
+            <h1>Abhilash Joshi</h1>
+            <p class="headline">Creating Intelligent Solutions with AI and Code</p>
+            <div class="social-links">
+                <a href="https://github.com/AbhilashJoshi25" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/abhilashjoshi" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/abhilashjoshi55" target="_blank" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
         </div>
-      </div>
-    </header>
 
-    <main>
-        <section id="projects">
-            <div class="container">
-                <h2>My Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card"><img src="assets/images/project1-placeholder.jpg" alt="Project 1 Screenshot"><div class="project-card-content"><h3>Project Name 1</h3><p>A brief, compelling description of your project.</p><div class="project-links"><a href="#">View Live</a><a href="#">Source Code</a></div></div></div>
-                    <div class="project-card"><img src="assets/images/project2-placeholder.jpg" alt="Project 2 Screenshot"><div class="project-card-content"><h3>Project Name 2</h3><p>A brief, compelling description of your project.</p><div class="project-links"><a href="#">View Live</a><a href="#">Source Code</a></div></div></div>
-                    <div class="project-card"><img src="assets/images/project3-placeholder.jpg" alt="Project 3 Screenshot"><div class="project-card-content"><h3>Project Name 3</h3><p>A brief, compelling description of your project.</p><div class="project-links"><a href="#">View Live</a><a href="#">Source Code</a></div></div></div>
-                </div>
-            </div>
-        </section>
+        <a href="#" id="view-work-btn" class="cta-button view-work-btn">View My Work</a>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        👋 Hey there! I'm Abhilash, an engineer with a passion for building smart, impactful systems. With expertise in AI and machine learning, I love tackling complex problems—from deep reinforcement learning to deploying NLP solutions.
-                    </p>
-                    <p>
-                        I'm focused on leveraging technology to make a positive difference, one innovative solution at a time. Let's connect and create something amazing together! 🤝
-                    </p>
-                </div>
-                <div class="about-skills">
-                    <h3>Core Toolkit:</h3>
-                    <ul>
-                        <li><i class="fas fa-brain"></i> TensorFlow & PyTorch</li>
-                        <li><i class="fab fa-docker"></i> Docker & Kubernetes</li>
-                        <li><i class="fas fa-cloud"></i> AWS & Azure</li>
-                        <li><i class="fab fa-python"></i> Python</li>
-                    </ul>
-                </div>
-            </div>
-            <br>
-            <a href="resume/Abhilash_Joshi.pdf" class="cta-button" target="_blank">Download My Resume</a>
+        <div class="right-panel">
+            <main>
+                <section id="projects">
+                    <h2>My Projects</h2>
+                    <div class="project-grid">
+                        <div class="project-card"><img src="assets/images/project1-placeholder.jpg" alt="Project 1"><div class="project-card-content"><h3>Project 1</h3><p>Description of your project.</p><div class="project-links"><a href="#">Live</a><a href="#">Code</a></div></div></div>
+                        <div class="project-card"><img src="assets/images/project2-placeholder.jpg" alt="Project 2"><div class="project-card-content"><h3>Project 2</h3><p>Description of your project.</p><div class="project-links"><a href="#">Live</a><a href="#">Code</a></div></div></div>
+                        <div class="project-card"><img src="assets/images/project3-placeholder.jpg" alt="Project 3"><div class="project-card-content"><h3>Project 3</h3><p>Description of your project.</p><div class="project-links"><a href="#">Live</a><a href="#">Code</a></div></div></div>
+                    </div>
+                </section>
+
+                <section id="about">
+                    <h2>About Me</h2>
+                    <div class="about-content">
+                        <p>👋 Hey there! I'm Abhilash, an engineer with a passion for building smart, impactful systems...</p>
+                    </div>
+                    <a href="resume/Abhilash_Joshi.pdf" class="cta-button" target="_blank">Download My Resume</a>
+                </section>
+
+                <section id="contact">
+                    <h2>Get In Touch</h2>
+                    <p>I'm currently looking for new opportunities. Feel free to reach out!</p>
+                    <a href="mailto:10xabhilash@gmail.com" class="cta-button">Say Hello</a>
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2025 Abhilash Joshi. All Rights Reserved.</p>
+            </footer>
         </div>
-    </section>
 
-        <section id="contact">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <p>I'm currently looking for new opportunities. Feel free to reach out!</p>
-                <a href="mailto:10xabhilash@gmail.com" class="cta-button">Say Hello</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Abhilash Joshi. All Rights Reserved.</p>
-    </footer>
+    </div>
 
     <script>
         const themeToggle = document.getElementById('theme-toggle');
+        const viewWorkBtn = document.getElementById('view-work-btn');
         const body = document.body;
-        const applySavedTheme = () => { const savedTheme = localStorage.getItem('theme'); if (savedTheme === 'dark') { body.classList.add('dark-mode'); } };
-        const toggleTheme = () => { body.classList.toggle('dark-mode'); if (body.classList.contains('dark-mode')) { localStorage.setItem('theme', 'dark'); } else { localStorage.removeItem('theme'); } };
+
+        // Theme toggle functionality
+        const applySavedTheme = () => { const savedTheme = localStorage.getItem('theme'); if (savedTheme === 'dark') body.classList.add('dark-mode'); };
+        const toggleTheme = () => { body.classList.toggle('dark-mode'); if (body.classList.contains('dark-mode')) localStorage.setItem('theme', 'dark'); else localStorage.removeItem('theme'); };
         themeToggle.addEventListener('click', toggleTheme);
         document.addEventListener('DOMContentLoaded', applySavedTheme);
+
+        // New functionality for the layout change
+        viewWorkBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevents the link from trying to navigate
+            document.body.classList.add('content-view');
+        });
     </script>
 </body>
 </html>
