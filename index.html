@@ -16,20 +16,26 @@
 <body>
 
     <header class="hero">
-      <div id="theme-toggle" class="theme-toggle">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-      </div>
-      <div class="container">
-        <h1>Abhilash Joshi</h1>
-        <p class="headline">Creating Intelligent Solutions with AI and Code</p>
-        <a href="#projects" class="cta-button">View My Work</a>
-        <div class="social-links" style="margin-top: 2rem;">
-          <a href="https://github.com/AbhilashJoshi25" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <div id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
         </div>
-      </div>
+
+        <div class="container">
+            <img src="assets/images/pFIyqT2D_400x400.jpg" alt="Profile Photo of Abhilash Joshi" class="profile-photo">
+            
+            <h1>Abhilash Joshi</h1>
+            
+            <p class="headline">Creating Intelligent Solutions with AI and Code</p>
+            
+            <a href="#projects" class="cta-button">View My Work</a>
+            
+            <div class="social-links" style="margin-top: 2rem;">
+                <a href="https://github.com/AbhilashJoshi25" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/abhilashjoshi" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/abhilashjoshi55" target="_blank" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -38,7 +44,7 @@
                 <h2>My Projects</h2>
                 <div class="project-grid">
                     <div class="project-card">
-                        <img src="images/project1-placeholder.jpg" alt="Project 1 Screenshot">
+                        <img src="assets/images/project1-placeholder.jpg" alt="Project 1 Screenshot">
                         <div class="project-card-content">
                             <h3>Project Name 1</h3>
                             <p>A brief, compelling description of what this project is, the problem it solves, and the technologies used.</p>
@@ -49,7 +55,7 @@
                         </div>
                     </div>
                     <div class="project-card">
-                        <img src="images/project2-placeholder.jpg" alt="Project 2 Screenshot">
+                        <img src="assets/images/project2-placeholder.jpg" alt="Project 2 Screenshot">
                         <div class="project-card-content">
                             <h3>Project Name 2</h3>
                             <p>A brief, compelling description of what this project is, the problem it solves, and the technologies used.</p>
@@ -60,7 +66,7 @@
                         </div>
                     </div>
                     <div class="project-card">
-                        <img src="images/project3-placeholder.jpg" alt="Project 3 Screenshot">
+                        <img src="assets/images/project3-placeholder.jpg" alt="Project 3 Screenshot">
                         <div class="project-card-content">
                             <h3>Project Name 3</h3>
                             <p>A brief, compelling description of what this project is, the problem it solves, and the technologies used.</p>
@@ -77,11 +83,27 @@
         <section id="about">
             <div class="container">
                 <h2>About Me</h2>
-                <p>
-                    I am a passionate developer with a strong interest in Artificial Intelligence and Machine Learning. I love building applications that are not only functional but also intuitive and user-friendly. My goal is to leverage technology to solve real-world problems and create a positive impact. When I'm not coding, I enjoy [Your Hobby Here].
-                </p>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            👋 Hey there! I'm Abhilash, an engineer with a passion for building smart, impactful systems. With expertise in AI and machine learning, I love tackling complex problems—from deep reinforcement learning to deploying NLP solutions.
+                        </p>
+                        <p>
+                            I'm focused on leveraging technology to make a positive difference, one innovative solution at a time. Let's connect and create something amazing together! 🤝
+                        </p>
+                    </div>
+                    <div class="about-skills">
+                        <h3>Core Toolkit:</h3>
+                        <ul>
+                            <li><i class="fas fa-brain"></i> TensorFlow & PyTorch</li>
+                            <li><i class="fab fa-docker"></i> Docker & Kubernetes</li>
+                            <li><i class="fas fa-cloud"></i> AWS & Azure</li>
+                            <li><i class="fab fa-python"></i> Python</li>
+                        </ul>
+                    </div>
+                </div>
                 <br>
-                <a href="resume/YourResume.pdf" class="cta-button" target="_blank">Download My Resume</a>
+                <a href="resume/Abhilash_Joshi.pdf" class="cta-button" target="_blank">Download My Resume</a>
             </div>
         </section>
 
@@ -98,5 +120,28 @@
         <p>&copy; 2025 Abhilash Joshi. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        const applySavedTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+            }
+        };
+
+        const toggleTheme = () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.removeItem('theme');
+            }
+        };
+
+        themeToggle.addEventListener('click', toggleTheme);
+        document.addEventListener('DOMContentLoaded', applySavedTheme);
+    </script>
 </body>
 </html>
