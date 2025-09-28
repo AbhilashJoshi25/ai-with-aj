@@ -47,9 +47,48 @@ body.dark-mode .project-card:hover { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); 
 .project-card p { font-size: 0.95rem; margin-bottom: 1rem; color: var(--text-muted-color); }
 .project-links a { margin-right: 1rem; font-weight: bold; }
 /* --- About Section --- */
-#about .container { text-align: center; }
-.about-content { max-width: 800px; margin: 2rem auto; text-align: left; }
-.about-content p { margin-bottom: 1.5rem; }
+/* --- About Section --- */
+#about .container { 
+    text-align: center; 
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: left;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.about-text { 
+    flex: 2; 
+    min-width: 300px; 
+}
+.about-skills { 
+    flex: 1; 
+    min-width: 250px; 
+    background-color: var(--bg-color); 
+    padding: 1.5rem; 
+    border-radius: 8px; 
+}
+.about-skills h3 { 
+    margin-bottom: 1rem; 
+}
+.about-skills ul { 
+    list-style: none; 
+    padding: 0; 
+}
+.about-skills li { 
+    margin-bottom: 0.75rem; 
+    font-size: 1.1rem; 
+}
+.about-skills i { 
+    margin-right: 10px; 
+    color: var(--accent-color); 
+    width: 20px; 
+    text-align: center; 
+}
 /* --- Contact Section --- */
 #contact { text-align: center; }
 #contact p { margin-bottom: 2rem; }
