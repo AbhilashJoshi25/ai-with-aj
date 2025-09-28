@@ -13,9 +13,26 @@ html { scroll-behavior: smooth; }
 body { font-family: var(--font-secondary); background-color: var(--bg-color); color: var(--text-color); transition: background-color 0.3s, color 0.3s; }
 .portfolio-wrapper { min-height: 100vh; position: relative; }
 
+/* --- Theme Toggle --- */
+.theme-toggle {
+    /* FIXED: Position is now fixed to the viewport */
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-muted-color);
+    z-index: 1000; /* Ensures it's on top of other elements */
+}
+.theme-toggle .fa-sun { display: none; }
+body.dark-mode .theme-toggle .fa-sun { display: block; }
+body.dark-mode .theme-toggle .fa-moon { display: none; }
+
+
 /* --- Left Panel (Sidebar) --- */
 .left-panel {
-    position: absolute;
+    /* FIXED: Position is now consistently 'fixed' for a seamless transition */
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -25,7 +42,7 @@ body { font-family: var(--font-secondary); background-color: var(--bg-color); co
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: all 0.9s cubic-bezier(0.65, 0, 0.35, 1); /* REFINED: Single, smooth transition for all properties */
+    transition: all 0.9s cubic-bezier(0.65, 0, 0.35, 1);
 }
 .profile-photo {
     width: 150px; height: auto; border-radius: 8px; margin-bottom: 1.5rem; border: 4px solid var(--accent-color); box-shadow: var(--card-shadow);
@@ -34,7 +51,7 @@ body { font-family: var(--font-secondary); background-color: var(--bg-color); co
 h1 { font-family: var(--font-primary); font-size: 3rem; margin-bottom: 0.5rem; }
 .headline { font-size: 1.5rem; color: var(--text-muted-color); margin-bottom: 2rem; }
 .view-work-btn { margin-bottom: 2rem; }
-.social-links { margin-bottom: 2rem; } /* Added for spacing */
+.social-links { margin-bottom: 2rem; }
 .social-links a { font-size: 1.5rem; color: var(--text-color); margin: 0 0.75rem; transition: color 0.3s ease; }
 .social-links a:hover { color: var(--accent-color); }
 
@@ -57,7 +74,6 @@ body.content-view::before {
 @keyframes fadeIn { to { opacity: 1; } }
 
 body.content-view .left-panel {
-    position: fixed;
     top: 0;
     left: 0;
     transform: translate(0, 0);
@@ -80,31 +96,23 @@ body.content-view .right-panel {
 .contact-sidebar {
     opacity: 0;
     visibility: hidden;
-    margin-top: auto; /* Pushes this section to the bottom */
+    margin-top: auto;
     padding-bottom: 1rem;
     transition: opacity 0.8s ease-in-out 0.5s, visibility 0.8s ease-in-out 0.5s;
 }
 .contact-sidebar h3 { font-size: 1.2rem; margin-bottom: 1rem; }
-.contact-sidebar .cta-button { width: 100%; text-align: center; } /* Makes button full width */
+.contact-sidebar .cta-button { width: 100%; text-align: center; }
 body.content-view .contact-sidebar { opacity: 1; visibility: visible; }
 
-/* --- Theme Toggle & Section Styling --- */
-.theme-toggle { position: absolute; top: 2rem; right: 2rem; cursor: pointer; font-size: 1.5rem; color: var(--text-muted-color); z-index: 100; }
-.theme-toggle .fa-sun { display: none; }
-body.dark-mode .theme-toggle .fa-sun { display: block; }
-body.dark-mode .theme-toggle .fa-moon { display: none; }
-
+/* --- General Section Styling --- */
 section { padding: 2rem 0; text-align: center; }
 h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; }
 .cta-button { display: inline-block; padding: 0.8rem 2rem; background: var(--accent-color); color: #fff; border-radius: 5px; font-size: 1.1rem; text-decoration: none; cursor: pointer; }
 footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-color); margin-top: 2rem; }
-
-/* --- Project Cards & About Me --- */
 .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 .project-card { background: var(--bg-alt-color); box-shadow: var(--card-shadow); border-radius: 8px; text-align: left; }
 .project-card img { width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px; }
 .project-card-content { padding: 1.5rem; }
-#about .container, #about .about-content { text-align: center; }
 .about-content { max-width: 800px; margin: 2rem auto; text-align: left; }
 .about-content p { margin-bottom: 1.5rem; }
 
