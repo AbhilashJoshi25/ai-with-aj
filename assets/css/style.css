@@ -15,14 +15,13 @@ body { font-family: var(--font-secondary); background-color: var(--bg-color); co
 
 /* --- Theme Toggle --- */
 .theme-toggle {
-    /* FIXED: Position is now fixed to the viewport */
     position: fixed;
     top: 2rem;
     right: 2rem;
     cursor: pointer;
     font-size: 1.5rem;
     color: var(--text-muted-color);
-    z-index: 1000; /* Ensures it's on top of other elements */
+    z-index: 1000;
 }
 .theme-toggle .fa-sun { display: none; }
 body.dark-mode .theme-toggle .fa-sun { display: block; }
@@ -31,7 +30,6 @@ body.dark-mode .theme-toggle .fa-moon { display: none; }
 
 /* --- Left Panel (Sidebar) --- */
 .left-panel {
-    /* FIXED: Position is now consistently 'fixed' for a seamless transition */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -89,7 +87,18 @@ body.content-view .profile-photo { width: 100px; }
 body.content-view .view-work-btn { opacity: 0; visibility: hidden; height: 0; margin: 0; padding: 0; border: none; transition: all 0.5s ease; }
 
 body.content-view .right-panel {
-    opacity: 1; visibility: visible; position: static; grid-column: 3; height: 100vh; overflow-y: auto; padding: 3rem 4rem;
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    grid-column: 3;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+}
+body.content-view .right-panel main {
+    flex-grow: 1;
 }
 
 /* --- Contact Section in Sidebar --- */
@@ -108,7 +117,18 @@ body.content-view .contact-sidebar { opacity: 1; visibility: visible; }
 section { padding: 2rem 0; text-align: center; }
 h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; }
 .cta-button { display: inline-block; padding: 0.8rem 2rem; background: var(--accent-color); color: #fff; border-radius: 5px; font-size: 1.1rem; text-decoration: none; cursor: pointer; }
-footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-color); margin-top: 2rem; }
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-muted-color);
+}
+
+/* --- Project Cards & About Me --- */
 .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 .project-card { background: var(--bg-alt-color); box-shadow: var(--card-shadow); border-radius: 8px; text-align: left; }
 .project-card img { width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px; }
