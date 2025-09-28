@@ -71,7 +71,7 @@ body.dark-mode .theme-toggle .fa-moon { display: none; }
     position: relative;
     transition: background-color 0.3s;
 }
-/* NEW: Profile Photo Style */
+/* Profile Photo Style */
 .profile-photo {
     width: 150px;
     height: 150px;
@@ -121,22 +121,16 @@ body.dark-mode .project-card:hover { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); 
 
 /* --- About Section --- */
 #about .container { text-align: center; }
-/* NEW: About Me two-column layout */
+/* Simplified About Me layout */
 .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    text-align: left;
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    max-width: 800px; /* Constrain width for readability */
+    margin: 2rem auto; /* Center the paragraph and add space */
+    text-align: left; /* Keep text left-aligned for readability */
 }
-.about-text { flex: 2; min-width: 300px; }
-.about-skills { flex: 1; min-width: 250px; background-color: var(--bg-color); padding: 1.5rem; border-radius: 8px; }
-.about-skills h3 { margin-bottom: 1rem; }
-.about-skills ul { list-style: none; padding: 0; }
-.about-skills li { margin-bottom: 0.75rem; font-size: 1.1rem; }
-.about-skills i { margin-right: 10px; color: var(--accent-color); width: 20px; text-align: center; }
+.about-content p {
+    margin-bottom: 1.5rem; /* Add more space between paragraphs if needed */
+}
+
 
 /* --- Contact Section --- */
 #contact { text-align: center; }
@@ -151,6 +145,5 @@ footer { text-align: center; padding: 2rem; background: var(--text-color); color
     h2 { font-size: 1.8rem; }
     .hero { min-height: auto; padding: 6rem 1rem; }
     .theme-toggle { top: 1rem; right: 1rem; }
-    .about-content { text-align: center; }
-    .about-text { text-align: left; }
+    .about-content { text-align: left; /* Ensure text remains left-aligned on small screens */ }
 }
