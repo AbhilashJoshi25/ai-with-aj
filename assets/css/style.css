@@ -1,11 +1,11 @@
 /* --- Color & Font Variables --- */
 :root {
     /* Light Theme (Default) */
-    --bg-color: #f8f9fa;       /* Off-white background */
-    --bg-alt-color: #ffffff;   /* Pure white for cards/sections */
-    --text-color: #212529;     /* Dark text */
-    --text-muted-color: #6c757d; /* Lighter grey text */
-    --accent-color: #0d6efd;    /* Blue for buttons/links */
+    --bg-color: #f8f9fa;
+    --bg-alt-color: #ffffff;
+    --text-color: #212529;
+    --text-muted-color: #6c757d;
+    --accent-color: #0d6efd;
     --accent-hover-color: #0b5ed7;
     --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     
@@ -16,11 +16,11 @@
 
 body.dark-mode {
     /* Dark Theme */
-    --bg-color: #121212;         /* Very dark grey background */
-    --bg-alt-color: #1e1e1e;     /* Slightly lighter grey for cards */
-    --text-color: #f8f9fa;       /* Light off-white text */
-    --text-muted-color: #adb5bd; /* Lighter grey text */
-    --accent-color: #4dabf7;      /* A lighter blue for better contrast */
+    --bg-color: #121212;
+    --bg-alt-color: #1e1e1e;
+    --text-color: #f8f9fa;
+    --text-muted-color: #adb5bd;
+    --accent-color: #4dabf7;
     --accent-hover-color: #74c0fc;
     --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
@@ -36,7 +36,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 .container { max-width: 960px; margin: auto; overflow: hidden; padding: 0 2rem; }
-h1, h2 { font-family: var(--font-primary); font-weight: 600; }
+h1, h2, h3 { font-family: var(--font-primary); font-weight: 600; }
 h1 { font-size: 3rem; line-height: 1.2; }
 h2 { font-size: 2rem; text-align: center; margin-bottom: 2rem; }
 p { font-size: 1.1rem; margin-bottom: 1rem; }
@@ -51,19 +51,19 @@ a { text-decoration: none; color: var(--accent-color); }
     font-size: 1.5rem;
     color: var(--text-muted-color);
     transition: color 0.3s ease;
-    z-index: 10;
+    z-index: 100;
 }
 .theme-toggle:hover { color: var(--accent-color); }
 .theme-toggle .fa-sun { display: none; }
 body.dark-mode .theme-toggle .fa-sun { display: block; }
 body.dark-mode .theme-toggle .fa-moon { display: none; }
 
-
 /* --- Hero Section --- */
 .hero {
     background-color: var(--bg-alt-color);
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -71,28 +71,17 @@ body.dark-mode .theme-toggle .fa-moon { display: none; }
     position: relative;
     transition: background-color 0.3s;
 }
-/* ADDED: Flexbox styles to center the new photo and text vertically */
-.hero .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-/* ADDED: Styles for the circular profile photo */
+/* NEW: Profile Photo Style */
 .profile-photo {
     width: 150px;
     height: 150px;
     border-radius: 50%; /* This makes the image a circle */
     object-fit: cover;
+    margin-bottom: 1.5rem;
     border: 4px solid var(--accent-color);
     box-shadow: var(--card-shadow);
-    margin-bottom: 1.5rem;
 }
-.hero .social-links a {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin: 0 0.75rem;
-    transition: color 0.3s ease;
-}
+.hero .social-links a { font-size: 1.5rem; color: var(--text-color); margin: 0 0.75rem; transition: color 0.3s ease; }
 .hero .social-links a:hover { color: var(--accent-color); }
 .hero h1 { margin-bottom: 0.5rem; }
 .hero .headline { font-size: 1.5rem; color: var(--text-muted-color); margin-bottom: 2rem; }
@@ -100,7 +89,7 @@ body.dark-mode .theme-toggle .fa-moon { display: none; }
     display: inline-block;
     padding: 0.8rem 2rem;
     background: var(--accent-color);
-    color: #fff; /* Changed for better button text contrast */
+    color: #fff; /* Changed for better contrast */
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -126,23 +115,35 @@ section:nth-child(even) { background-color: var(--bg-alt-color); transition: bac
 body.dark-mode .project-card:hover { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); }
 .project-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
 .project-card-content { padding: 1.5rem; }
-.project-card h3 { font-family: var(--font-primary); margin-bottom: 0.5rem; }
+.project-card h3 { margin-bottom: 0.5rem; }
 .project-card p { font-size: 0.95rem; margin-bottom: 1rem; color: var(--text-muted-color); }
 .project-links a { margin-right: 1rem; font-weight: bold; }
 
-/* --- About & Contact Sections --- */
-#about, #contact { text-align: center; }
-#about p { max-width: 700px; margin-left: auto; margin-right: auto; }
+/* --- About Section --- */
+#about .container { text-align: center; }
+/* NEW: About Me two-column layout */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: left;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.about-text { flex: 2; min-width: 300px; }
+.about-skills { flex: 1; min-width: 250px; background-color: var(--bg-color); padding: 1.5rem; border-radius: 8px; }
+.about-skills h3 { margin-bottom: 1rem; }
+.about-skills ul { list-style: none; padding: 0; }
+.about-skills li { margin-bottom: 0.75rem; font-size: 1.1rem; }
+.about-skills i { margin-right: 10px; color: var(--accent-color); width: 20px; text-align: center; }
+
+/* --- Contact Section --- */
+#contact { text-align: center; }
 #contact p { margin-bottom: 2rem; }
 
 /* --- Footer --- */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background: var(--text-color);
-    color: var(--bg-color);
-    transition: background-color 0.3s, color 0.3s;
-}
+footer { text-align: center; padding: 2rem; background: var(--text-color); color: var(--bg-color); transition: background-color 0.3s, color 0.3s; }
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
@@ -150,5 +151,6 @@ footer {
     h2 { font-size: 1.8rem; }
     .hero { min-height: auto; padding: 6rem 1rem; }
     .theme-toggle { top: 1rem; right: 1rem; }
-    .profile-photo { width: 120px; height: 120px; }
+    .about-content { text-align: center; }
+    .about-text { text-align: left; }
 }
