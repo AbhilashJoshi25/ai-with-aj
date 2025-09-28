@@ -126,6 +126,7 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
     color: var(--text-muted-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* --- Project Cards & About Me --- */
@@ -135,9 +136,9 @@ footer {
     box-shadow: var(--card-shadow);
     border-radius: 8px;
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Modified for Hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
-.project-card:hover { /* Modified for Hover */
+.project-card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
@@ -160,7 +161,7 @@ body.dark-mode .project-card:hover {
     .contact-sidebar { margin-top: 2rem; text-align: center; }
 }
 
-/* --- NEW: Animated Underline for Links --- */
+/* --- Animated Underline for Links --- */
 .project-links a {
     position: relative;
     padding-bottom: 5px;
@@ -182,7 +183,7 @@ body.dark-mode .project-card:hover {
     transform-origin: bottom left;
 }
 
-/* --- NEW: Scroll Animations --- */
+/* --- Scroll Animations --- */
 .project-card, #about, footer {
     opacity: 0;
     filter: blur(5px);
