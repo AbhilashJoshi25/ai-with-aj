@@ -10,7 +10,12 @@ body.dark-mode { /* Dark Theme */
 /* --- Global & Initial Layout --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: var(--font-secondary); background-color: var(--bg-color); color: var(--text-color); transition: background-color 0.3s, color 0.3s; }
+body { 
+    font-family: var(--font-secondary); 
+    background-color: var(--bg-color); 
+    color: var(--text-color); 
+    /* REMOVED: transition for background-color and color */
+}
 .portfolio-wrapper { min-height: 100vh; position: relative; }
 
 /* --- Theme Toggle --- */
@@ -40,7 +45,8 @@ body.dark-mode .theme-toggle .fa-moon { display: none; }
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: all 0.9s cubic-bezier(0.65, 0, 0.35, 1);
+    /* UPDATED: 'all' is replaced with specific properties to prevent color transition */
+    transition: transform 0.9s cubic-bezier(0.65, 0, 0.35, 1), width 0.9s cubic-bezier(0.65, 0, 0.35, 1), top 0.9s cubic-bezier(0.65, 0, 0.35, 1), left 0.9s cubic-bezier(0.65, 0, 0.35, 1), padding 0.9s cubic-bezier(0.65, 0, 0.35, 1);
 }
 .profile-photo {
     width: 150px; height: auto; border-radius: 8px; margin-bottom: 1.5rem; border: 4px solid var(--accent-color); box-shadow: var(--card-shadow);
@@ -126,7 +132,7 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
     color: var(--text-muted-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    /* REMOVED: transition for background-color and color */
 }
 
 /* --- Project Cards & About Me --- */
@@ -136,7 +142,8 @@ footer {
     box-shadow: var(--card-shadow);
     border-radius: 8px;
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    /* UPDATED: Removed background-color and color from transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .project-card:hover {
     transform: translateY(-10px) scale(1.02);
